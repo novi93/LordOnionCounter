@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<class>
+  <config>
+    <configName>/c cloc.exe</configName>
+  </config>
+  <codeAuto>
+    <codeName>C:\RuleCounter_C.txt</codeName>
+  </codeAuto>
+  <extension>
+    <ext>
+      <extName>asa, asp</extName>
+    </ext>
+    <ext>
+      <extName>asax, ascx, asmx, aspx, config, master, sitemap, webinfo</extName>
+    </ext>
+    <ext>
+      <extName>C, c++, cc, cpp, cxx, pcc</extName>
+    </ext>
+    <ext>
+      <extName>h, H, hh, hpp</extName>
+    </ext>
+    <ext>
+      <extName>htm, html</extName>
+    </ext>
+    <ext>
+      <extName>bat, BAT, btm, BTM, cmd, CMD</extName>
+    </ext>
+    <ext>
+      <extName>aspx,  xml</extName>
+    </ext>
+    <ext>
+      <extName>csproj, vbproj, vcproj, wdproj, wixproj</extName>
+    </ext>
+    <ext>
+      <extName>js</extName>
+    </ext>
+  </extension>
+  <design>
+    <des>
+      <desName>Designer.vb</desName>
+    </des>
+    <des>
+      <desName>Designer.cs</desName>
+    </des>
+    <des>
+      <desName>html</desName>
+    </des>
+    <des>
+      <desName>php</desName>
+    </des>
+  </design>
+  <source>
+    <information>
+      <keyInfo>-1</keyInfo>
+      <NameInfo></NameInfo>
+    </information>
+    <information>
+      <keyInfo>0</keyInfo>
+      <NameInfo>PG tạo mới hoàn toàn</NameInfo>
+    </information>
+    <information>
+      <keyInfo>0</keyInfo>
+      <NameInfo>PG tạo mới có tham khảo source mẫu</NameInfo>
+    </information>
+    <information>
+      <keyInfo>0</keyInfo>
+      <NameInfo>PG tạo mới sử dụng Tool Generate</NameInfo>
+    </information>
+    <information>
+      <keyInfo>0</keyInfo>
+      <NameInfo>PG tạo mới chủ yếu PL/SQL</NameInfo>
+    </information>
+    <information>
+      <keyInfo>1</keyInfo>
+      <NameInfo>PG Customize</NameInfo>
+    </information>
+    <information>
+      <keyInfo>1</keyInfo>
+      <NameInfo>PG Customize có điều tra</NameInfo>
+    </information>
+    <information>
+      <keyInfo>1</keyInfo>
+      <NameInfo>PG Customize source PL/SQL</NameInfo>
+    </information>
+    <information>
+      <keyInfo>1</keyInfo>
+      <NameInfo>PG Convert cùng ngôn ngữ</NameInfo>
+    </information>
+    <information>
+      <keyInfo>0</keyInfo>
+      <NameInfo>PG Convert khác ngôn ngữ</NameInfo>
+    </information>
+  </source>
+</class>

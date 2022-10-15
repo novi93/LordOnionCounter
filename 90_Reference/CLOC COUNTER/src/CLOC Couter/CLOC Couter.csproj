@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{36B9E83E-F5A8-4CEB-B1DB-63DF876EEAE3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CLOC Couter</RootNamespace>
+    <AssemblyName>CLOC Couter</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <StartupObject>CLOC_Couter.My.MyApplication</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="SharpSvn" />
+    <Reference Include="SharpSvn.UI" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CLOC_Couter\Common.cs" />
+    <Compile Include="CLOC_Couter\CompareFile.cs" />
+    <Compile Include="CLOC_Couter\CountLOC.cs" />
+    <Compile Include="CLOC_Couter\frmCounterLOC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CLOC_Couter\frmCounterLOC.Designer.cs">
+      <DependentUpon>frmCounterLOC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CLOC_Couter\frmProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CLOC_Couter\frmProcess.Designer.cs">
+      <DependentUpon>frmProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CLOC_Couter\frmResultCountFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CLOC_Couter\frmResultCountFile.Designer.cs">
+      <DependentUpon>frmResultCountFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CLOC_Couter\frmResultDiff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CLOC_Couter\frmResultDiff.Designer.cs">
+      <DependentUpon>frmResultDiff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CLOC_Couter\frmSelectFileorFolder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CLOC_Couter\frmSelectFileorFolder.Designer.cs">
+      <DependentUpon>frmSelectFileorFolder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CLOC_Couter\frmSelectFileRepository.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CLOC_Couter\frmSelectFileRepository.Designer.cs">
+      <DependentUpon>frmSelectFileRepository.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CLOC_Couter\information.cs" />
+    <Compile Include="CLOC_Couter\Main.cs" />
+    <Compile Include="CLOC_Couter\My\MyApplication.cs" />
+    <Compile Include="CLOC_Couter\My\MyComputer.cs" />
+    <Compile Include="CLOC_Couter\My\MyProject.cs" />
+    <Compile Include="CLOC_Couter\My\MySettings.Designer.cs">
+      <DependentUpon>MySettings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="CLOC_Couter\My\MySettingsProperty.cs" />
+    <Compile Include="CLOC_Couter\My\Resources\Resources.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\AppEvents.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\AppEvents_Event.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\Application.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\Range.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\Workbook.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\WorkbookEvents.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\WorkbookEvents_Event.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\Workbooks.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\_Application.cs" />
+    <Compile Include="Microsoft\Office\Interop\Excel\_Workbook.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CLOC_Couter\frmCounterLOC.resources" />
+    <EmbeddedResource Include="CLOC_Couter\frmProcess.resources" />
+    <EmbeddedResource Include="CLOC_Couter\frmResultCountFile.resources" />
+    <EmbeddedResource Include="CLOC_Couter\frmResultDiff.resources" />
+    <EmbeddedResource Include="CLOC_Couter\frmSelectFileorFolder.resources" />
+    <EmbeddedResource Include="CLOC_Couter\frmSelectFileRepository.resources" />
+    <EmbeddedResource Include="CLOC_Couter\Resources.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.manifest" />
+    <None Include="CLOC_Couter\My\MySettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>MySettings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

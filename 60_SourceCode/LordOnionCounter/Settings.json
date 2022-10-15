@@ -1,0 +1,31 @@
+{
+    "TargetExtension": [
+        ".sql",
+        ".vbhtml",
+        ".html",
+        ".ts",
+        ".js",
+        ".scss",
+        ".css",
+        ".vb"
+    ],
+    "IgnoreName": [
+        //"Designer.vb",
+        "ServiceCommon.vb",
+        "AssemblyInfo.vb",
+        "*.vbproj"
+    ],
+    "FilePercent": [
+        {
+            "Ext": "Designer.vb",
+            "CountPercent": 35,
+            "SamePercent": 0
+        },
+        {
+            "Ext": "rpx",
+            "CountPercent": 35,
+            "SamePercent": 0
+        }
+    ],
+    "IsCountDesigner" :  false
+}

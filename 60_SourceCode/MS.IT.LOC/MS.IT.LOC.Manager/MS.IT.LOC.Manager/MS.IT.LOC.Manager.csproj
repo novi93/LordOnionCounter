@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{71E1AD58-EC38-48C5-A2EE-61190E33F5D4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MS.IT.LOC.Manager</RootNamespace>
+    <AssemblyName>MS.IT.LOC.Manager</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>4096</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppConfigurationManager.cs" />
+    <Compile Include="ConfigManager.cs" />
+    <Compile Include="DataManager.cs" />
+    <Compile Include="ExecutionMode.cs" />
+    <Compile Include="LOCManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SourceControlEventArgs.cs" />
+    <Compile Include="SourceControlEventHandler.cs" />
+    <Compile Include="SourceControlManager.cs" />
+    <Compile Include="SupportForStandardUser.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\MS.IT.LOC.CounterEngine\MS.IT.LOC.CounterEngine\MS.IT.LOC.CounterEngine.csproj">
+      <Project>{d53f71eb-22da-4e3f-974f-b98f27a5017a}</Project>
+      <Name>MS.IT.LOC.CounterEngine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MS.IT.LOC.Model\MS.IT.LOC.Model.csproj">
+      <Project>{7e400cfa-47a4-455d-b810-e3097bf7af22}</Project>
+      <Name>MS.IT.LOC.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MS.IT.LOC.SourceControl\MS.IT.LOC.SourceControl.csproj">
+      <Project>{dc151187-8911-4103-8504-77b3896a9f26}</Project>
+      <Name>MS.IT.LOC.SourceControl</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E964FFC5-AC68-4D65-9AF5-4A580F1E557C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LOC</RootNamespace>
+    <AssemblyName>LordOnionCounter</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>ftp://172.16.7.102/Measure.App/LOC/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://172.16.7.102/Measure.App/</InstallUrl>
+    <ProductName>LordOnionCounter</ProductName>
+    <PublisherName>LordOnionCounter</PublisherName>
+    <SuiteName>Novirian</SuiteName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>LordOnionCounter.htm</WebPage>
+    <ApplicationRevision>23</ApplicationRevision>
+    <ApplicationVersion>1.0.1.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>LOC.App</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>9AEA8AA049BD467F08509B09599EEAE9D00A9FB0</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>LordOnionCounter_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Onion.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Runtime" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\Counter\CountByClocCli.cs" />
+    <Compile Include="Core\Counter\ICount.cs" />
+    <Compile Include="Core\Download\IDownloadItem.cs" />
+    <Compile Include="Core\Download\IDownloader.cs" />
+    <Compile Include="Core\Download\TfsGuildPathDownloadItem.cs" />
+    <Compile Include="Core\Download\TfsDownloadItem.cs" />
+    <Compile Include="Core\Download\TfsGuildPathDownloader.cs" />
+    <Compile Include="Core\Download\TfsDownloader.cs" />
+    <Compile Include="Core\Helper\IOHelper.cs" />
+    <Compile Include="Core\Helper\SettingHelper.cs" />
+    <Compile Include="Core\Logger\ILogger.cs" />
+    <Compile Include="Core\Helper\JsonHelper.cs" />
+    <Compile Include="Core\Helper\TfsHelper.cs" />
+    <Compile Include="Core\Logger\UILogger.cs" />
+    <Compile Include="Entites\CountItem.cs" />
+    <Compile Include="Entites\CountPG\CountDetailGrdEntity.cs" />
+    <Compile Include="Core\Factory\CountResquestFactory.cs" />
+    <Compile Include="Entites\Setting\FilePercent.cs" />
+    <Compile Include="View\Control\DataGridViewSummary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Control\DataGridViewSummary.designer.cs">
+      <DependentUpon>DataGridViewSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Control\OnionGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Control\ReadOnlyTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Control\ReadOnlyTextBox.designer.cs">
+      <DependentUpon>ReadOnlyTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Control\SummaryControlContainer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Control\TextHelper.cs" />
+    <Compile Include="VM\CountPgVM.cs" />
+    <Compile Include="Entites\CountPG\GridChangesetEntryEntity.cs" />
+    <Compile Include="Entites\Count\CountResquest.cs" />
+    <Compile Include="Entites\Count\CountResultHeader.cs" />
+    <Compile Include="Entites\Count\CountResultDetail.cs" />
+    <Compile Include="Entites\Count\CountResult.cs" />
+    <Compile Include="Entites\CountPrj\GridWI.cs" />
+    <Compile Include="Entites\Setting\Settings.cs" />
+    <Compile Include="Entites\CountPG\GridEntryEntity.cs" />
+    <Compile Include="Entites\Enum.cs" />
+    <Compile Include="Core\Extension\PathExtension.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="MappingProfile.cs" />
+    <Compile Include="View\FrmCountResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmCountResult.Designer.cs">
+      <DependentUpon>FrmCountResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmCountPG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmCountPG.Designer.cs">
+      <DependentUpon>FrmCountPG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global.cs" />
+    <Compile Include="Core\Extension\CollectionExtension.cs" />
+    <Compile Include="Core\Extension\StringExtension.cs" />
+    <Compile Include="App.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\Control\OnionButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="View\FrmCountResult.resx">
+      <DependentUpon>FrmCountResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmCountPG.resx">
+      <DependentUpon>FrmCountPG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Content Include="Settings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Readme.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\CheckAll100.png" />
+    <Content Include="Assets\CheckAll30.png" />
+    <Content Include="Assets\CheckAll30_2.png" />
+    <Content Include="Assets\exit.png" />
+    <Content Include="Assets\exit2.png" />
+    <Content Include="Assets\exit30.png" />
+    <Content Include="Assets\exit30_2.png" />
+    <Content Include="Assets\folder.png" />
+    <Content Include="Assets\Onion.ico" />
+    <Content Include="Assets\Onion_sub.png" />
+    <Content Include="Assets\unCheckAll100.png" />
+    <Content Include="Assets\unCheckAll30.png" />
+    <Content Include="Assets\unCheckAll30_2.png" />
+    <Content Include="cloc.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Onion.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection">
+      <Version>8.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="DataGridViewExtensions">
+      <Version>1.0.6153.38638</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection">
+      <Version>3.1.8</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.TeamFoundationServer.Client">
+      <Version>16.153.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.TeamFoundationServer.ExtendedClient">
+      <Version>16.153.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Services.Client">
+      <Version>16.153.0</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>12.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="Pri.LongPath">
+      <Version>2.0.53</Version>
+    </PackageReference>
+    <PackageReference Include="WorkItemTracking">
+      <Version>1.0.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <PublishFile Include="cloc.exe">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Settings.json">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Target Name="DeleteBinObjFolders" BeforeTargets="Clean">
+    <RemoveDir Directories="..\..\Publish" />
+    <RemoveDir Directories=".\bin" />
+    <RemoveDir Directories="$(BaseIntermediateOutputPath)" />
+  </Target>
+</Project>
